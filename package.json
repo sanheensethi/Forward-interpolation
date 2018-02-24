@@ -1,0 +1,24 @@
+{
+  "name": "forward-interpolation",
+  "version": "1.0.0",
+  "description": "Forward Interpolation and Newton's Forward Difference formula ",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sanheensethi/Forward-interpolation.git"
+  },
+  "keywords": [
+    "Forward",
+    "Interpolation",
+    "ForwardInterpolation"
+  ],
+  "author": "Sanheen Sethi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sanheensethi/Forward-interpolation/issues"
+  },
+  "homepage": "https://github.com/sanheensethi/Forward-interpolation#readme"
+}
