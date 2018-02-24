@@ -7,30 +7,33 @@
 	$data = array_values($dataarray);
 	$d="dy";
 	$p = ($wherefind-$ini)/$h;
-	$i=0;
-	for($j=1;$j<count($data);$j++){
-		$dy1[] = $data[$j]-$data[$i];
-		$i++;
+	
+	$x=count($dataarray)-1;
+	$k=1;
+	$g=$data;
+	while($x!=0){
+		$i=0;
+		for($j=1;$j<count($g);$j++){
+			${$d.$k}[] = $g[$j]-$g[$i++];
+		}
+		$dyx[$d.$k]=${$d.$k};
+		$g=${$d.$k++};
+		$x--;
 	}
-	$i=0;
-	for($j=1;$j<count($dy1);$j++){
-		$dy2[] = $dy1[$j]-$dy1[$i];
-		$i++;
+		echo "Data : <br>";
+		echo "&nbsp;&nbsp;&nbsp; x &nbsp;&nbsp;::&nbsp;&nbsp; y <br>";
+	foreach($dataarray as $key=>$datas){
+		echo $key." :: ".$datas."<br>";
 	}
-	$i=0;
-	for($j=1;$j<count($dy2);$j++){
-		$dy3[] = $dy2[$j]-$dy2[$i];
-		$i++;
-	}
-	$i=0;
-	for($j=1;$j<count($dy3);$j++){
-		$dy4[] = $dy3[$j]-$dy3[$i];
-		$i++;
-	}
-	var_dump($dy1);
-	var_dump($dy2);
-	var_dump($dy3);
-	var_dump($dy4);
+		echo "<hr>";
+	var_dump($dyx);
+	extract($dyx);
+	echo "<hr>";
+	foreach($dyx as $dx){
+		var_dump($dx);
+	}	
+		
+		
 	$sum=[];
 	for($i=0;$i<count($data);$i++){
 		if($i==0){
@@ -39,8 +42,8 @@
 			$sum[] = (p($p,$i)*${$d.$i}[0])/fact($i);
 		}
 	}
-	
-	echo array_sum($sum)." (approx)";
+	echo "<hr>";
+	echo "Answer : ".array_sum($sum)." (approx)";
 	
 	function fact($x){
 		if($x!=0){
